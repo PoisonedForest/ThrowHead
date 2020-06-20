@@ -28,7 +28,7 @@ class GetHeadThrowStick : CommandExecutor {
 
         meta?.setDisplayName("${args[0]}님의 머리를 던지는 막대")
         meta?.lore = listOf("전설의 ${args[0]}의 머리를 던지는 막대!")
-        item.addEnchantment(Enchantment.KNOCKBACK, 1)
+        item.addUnsafeEnchantment(Enchantment.KNOCKBACK, 1)
 
         item.setItemMeta(meta)
 
