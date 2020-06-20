@@ -5,6 +5,7 @@ import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
+import org.bukkit.enchantments.Enchantment
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
@@ -27,6 +28,7 @@ class GetHeadThrowStick : CommandExecutor {
 
         meta?.setDisplayName("${args[0]}님의 머리를 던지는 막대")
         meta?.lore = listOf("전설의 ${args[0]}의 머리를 던지는 막대!")
+        item.addEnchantment(Enchantment.LUCK, 1)
 
         item.setItemMeta(meta)
 
